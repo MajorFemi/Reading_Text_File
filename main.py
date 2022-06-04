@@ -15,7 +15,7 @@ def count_words():
     text = read_file_content("./story.txt")
     # [assignment] Add your code here
     new_text = text.lower()
-    file = new_text.strip('.?,')
+    file = new_text.replace('?',"").replace('.',"").replace(',',"")
     count = dict()
     words = file.split()
     
